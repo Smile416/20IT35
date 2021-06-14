@@ -4,15 +4,23 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("Imput a number");
-        double x = in.nextDouble();
-        System.out.println ("Input a second number");
-        double y = in.nextDouble();
-        double argone = Math.pow (Math.cos(x),4) ;
-        double argtwo = Math.pow (Math.sin(y),2) ;
-        double argthree = 0.25*Math.pow(2,Math.sin(2*x))-1;
-        double z = argone + argtwo +  argthree;
-        System.out.print(z);
+        System.out.println("Введите значение x");
+        int x = in.nextInt();
+        System.out.println("Введите значение a");
+        int a = in.nextInt();
+        System.out.println("Введите значение c");
+        int c = in.nextInt();
+        System.out.println("Введите значение x нач.");
+        int xнач = in.nextInt();
+        System.out.println("Введите значение x кон.");
+        int xкон = in.nextInt();
+        if (c < 0 && a != 0) {
+            double fx = -a * Math.pow(x, 2);
+        } else if (c > 0 && a == 0) {
+            double fx = (a - x) / (c * x);
+        } else {
+            System.out.println(x);
+        }
         in.close();
     }
 }
